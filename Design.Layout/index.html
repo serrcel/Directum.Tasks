@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="app">
-      <header id="header" class="header fixed top-0 z-50 w-full h-14 border-b border-gray-300 px-4">
+      <header id="header" class="header fixed top-0 z-50 w-full h-14 px-4 bg-directum-blue">
         <div class="header__content flex items-center justify-between h-full">
           <button id="burger" class="md:hidden flex flex-col gap-1 ml-auto">
             <span class="block w-6 h-0.5 bg-white"></span>
@@ -38,6 +38,18 @@
           </div>
         </div>
       </header>
+
+      <footer id="footer" class="footer fixed bottom-0 w-full bg-directum-gray text-white py-4">
+        <div class="footer__content flex flex-col items-center justify-center gap-2 w-full px-4">
+          <div class="footer__logo">
+            <img src="./Assets/directum_logo.png" alt="Логотип" class="w-24 h-auto">
+          </div>
+
+          <div class="footer__text">
+            <p class="text-sm font-medium text-directum-gray-text">© DIRECTUM, 2019</p>
+          </div>
+        </div>
+      </footer>
 
     </div>
     <script type="module" src="/src/main.ts"></script>

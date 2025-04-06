@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
-.header {
-    background: #17A2B8;
+@theme {
+    --color-directum-blue: #17A2B8;
+    --color-directum-gray: #F8F9FA;
+    --color-directum-gray-text: #BABABA;
 }
