@@ -28,7 +28,7 @@ export class FormBuilder {
     addTextInput(item: FormItem): FormBuilder {
         this.formElements.push(
             <div className="flex flex-col space-y-2 pb-4">
-                <label htmlFor="name" className="text-sm font-semibold">{item.label}:</label>
+                <label htmlFor="name" className="text-sm font-semibold">{item.label}</label>
                 <input
                     type={item.validationRules?.type}
                     name="name"
@@ -36,6 +36,7 @@ export class FormBuilder {
                     placeholder={item.placeholder ? item.placeholder : ""}
                     required={item.required}
                     className={`${item.class} border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-300 font-medium`}
+                    pattern={item.validationRules?.type === 'tel' ? "[0-9]" : "*"}
                 />
             </div>
         )
@@ -54,8 +55,8 @@ export class FormBuilder {
                                 name="radio"
                                 value={radioItem.value}
                                 className="form-radio"
-                                checked={radioItem.checked}
-                                onChange={() => {}}
+                                defaultChecked={radioItem.checked}
+                                required={item.required}
                             />
                             <span className="ml-2">{radioItem.label}</span>
                         </label>
@@ -71,12 +72,11 @@ export class FormBuilder {
         this.formElements.push(
             <div className="flex flex-col space-y-2 pb-4">
                 <label className="text-sm font-semibold">{item.label}</label>
-                <select className="border border-gray-300 rounded-md p-2 font-medium">
+                <select required={item.required} className="border border-gray-300 rounded-md p-2 font-medium" defaultValue={item.options?.find(o => o.selected)?.value}>
                     {item.options!.map((option) => (
                         <option
                             key={option.value}
                             value={option.value}
-                            selected={option.selected}
                         >
                             {option.text}
                         </option>
@@ -90,38 +90,36 @@ export class FormBuilder {
 
     addButton(text: string, classStyle: string): FormBuilder {
         this.formElements.push(
-            <div className="flex flex-col space-y-2 pb-4">
-                <div className="space-y-1">
-                    <button
-                        className={`${classStyle} flex items-center bg-orange-500 text-white px-4 py-2 rounded-xl cursor-pointer font-medium hover:bg-orange-600 gap-2`}
-                    >
-                        {text}
-                    </button>
-                </div>
-            </div>
+            <button
+                type="submit"
+                className={`${classStyle} w-full flex items-center justify-center bg-orange-500 text-white px-4 py-2 rounded-xl cursor-pointer font-medium hover:bg-orange-600 gap-2`}
+            >
+                {text}
+            </button>
         )
         return this;
     }
 
     addCheckbox(item: FormItem): FormBuilder {
         this.formElements.push(
-            <div className="flex items-center space-x-2 pb-4">
-                <input
-                    type="checkbox"
-                    name={item.name}
-                    checked={item.checked}
-                    required={item.required}
-                    className={`form-checkbox ${item.class}`}
-                    disabled={item.disabled}
-                />
-                <label htmlFor={item.name} className="text-sm font-semibold">
-                    {item.label}
+            <div className="w-full pb-4">
+                <label className="flex items-center space-x-2 w-full text-sm font-semibold break-words">
+                    <input
+                        type="checkbox"
+                        name={item.name}
+                        defaultChecked={item.checked}
+                        required={item.required}
+                        className={`form-checkbox ${item.class}`}
+                        disabled={item.disabled}
+                    />
+                    <span className="flex-1">{item.label}</span>
                 </label>
             </div>
-        )
+        );
 
         return this;
     }
+
 
     addTextAreaInput(item: FormItem): FormBuilder {
         this.formElements.push(
