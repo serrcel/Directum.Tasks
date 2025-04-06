@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsExample", "EventsExample\EventsExample.csproj", "{6CAF292E-C40A-4C91-AEAE-7809478359B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.Example", "Events.Example\Events.Example.csproj", "{6CAF292E-C40A-4C91-AEAE-7809478359B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
