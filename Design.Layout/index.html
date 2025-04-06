@@ -4,10 +4,42 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link href="/src/styles.css" rel="stylesheet">
+    <title>Directum Layout</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header id="header" class="header fixed top-0 z-50 w-full h-14 border-b border-gray-300 px-4">
+        <div class="header__content flex items-center justify-between h-full">
+          <button id="burger" class="md:hidden flex flex-col gap-1 ml-auto">
+            <span class="block w-6 h-0.5 bg-white"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+          </button>
+
+          <div class="header__menu w-full flex justify-center">
+            <ul id="menu" class="header__menu-nav flex items-center gap-4 md:gap-16 lg:gap-45 2xl:gap-65 hidden md:flex">
+              <li class="header__menu-item">
+                <a class="header__menu-item-link text-white font-medium">О мероприятии</a>
+              </li>
+
+              <li class="header__menu-item">
+                <a class="header__menu-item-link text-white font-medium">Регистрация</a>
+              </li>
+
+              <li class="header__menu-item">
+                <a class="header__menu-item-link text-white font-medium" >Стоимость участия</a>
+              </li>
+
+              <li class="header__menu-item">
+                <a class="header__menu-item-link text-white font-medium">Спонсоры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
