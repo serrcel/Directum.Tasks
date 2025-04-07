@@ -35,6 +35,169 @@
       </div>
     </div>
   </header>
+
+  <main class="page__content">
+    <div id='banner' class="banner container-fluid justify-content-center align-items-center flex-column">
+      <div class="banner__logo">
+        <img src="/Design.Layout/Assets/directum-logo-banner.png" alt="Logo" class="footer__logo_img">
+      </div>
+      <h3 class="banner__title">Название мероприятия</h3>
+      <div class="container-fluid banner__date text-center text-white">
+        <p class="banner__date-text">4 МАЯ 2049</p>
+        <p class="banner__location-text">в самом сердце страны</p>
+        <button class="btn btn-primary banner__register-btn" data-bs-toggle="modal" data-bs-target="#registrationModal">Регистрация</button>
+      </div>
+    </div>
+
+    <div id='registration' class="registration container-fluid d-flex justify-content-center align-items-center p-3">
+      <div class="row w-75">
+      <div class="col-md-6">
+        <p class="registration__text">Дорогие друзья!</p>
+        <p class="text_center">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h4 class="registration__title">Регистрация</h4>
+        <p class="registration__text"></p>
+        Пожалуйста, проверьте правильность введенных данных:<br>
+        <ul class="list-unstyled">
+          <li><strong id="user-name">ФИО:</strong></li>
+          <li><strong>Место работы: </strong>DIRECTUM</li>
+          <li><strong id="user-email">E-mail:</strong></li>
+        </p>
+      </div>
+      </div>
+    </div>
+
+    <div id="pricing" class="container p-4">
+      <div class="text-center">
+      <h2>Стоимость участия</h2>
+      <p>(На одного человека)</p>
+      </div>
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Стоимость ДО 1 января</th>
+          <th>Стоимость ПОСЛЕ 1 января</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>С проживанием в 2-местном номере</td>
+          <td>30 000 ₽</td>
+          <td>35 000 ₽</td>
+        </tr>
+        <tr>
+          <td>Доплата за 1-местное проживание</td>
+          <td>500 ₽</td>
+          <td>1500 ₽</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="gallery carousel slide container-fluid p-0" data-bs-ride="carousel">
+      <h2 class="text-center py-3 m-0">Галерея</h2>
+      <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: orange;"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: orange;"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: orange;"></button>
+      </div>
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Assets/pika1.png" class="d-block w-100" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="Assets/pika2.png" class="d-block w-100" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="Assets/pika3.png" class="d-block w-100" alt="Image 3">
+      </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div id="speakes" class="speakers container py-5 text-center">
+      <h4><strong>Наши спикеры</strong></h4>
+      <div class="row justify-content-center mt-4 gx-4 gy-4">
+      <div class="col-12 col-sm-6 col-md-3 speaker">
+        <img src="/Design.Layout/Assets/pika2.png" alt="Спикер" class="speaker__img rounded-circle img-fluid mb-2">
+        <h6 class="speaker__name">Детектив пикачу</h6>
+        <p class="speaker__desc text-center">умудрённый, остроумный и обаятельный сыщик</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 speaker">
+        <img src="/Design.Layout/Assets/pika2.png" alt="Спикер" class="speaker__img rounded-circle img-fluid mb-2">
+        <h6 class="speaker__name">Детектив пикачу</h6>
+        <p class="speaker__desc text-center">умудрённый, остроумный и обаятельный сыщик</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 speaker">
+        <img src="/Design.Layout/Assets/pika2.png" alt="Спикер" class="speaker__img rounded-circle img-fluid mb-2">
+        <h6 class="speaker__name">Детектив пикачу</h6>
+        <p class="speaker__desc text-center">умудрённый, остроумный и обаятельный сыщик</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 speaker">
+        <img src="/Design.Layout/Assets/pika2.png" alt="Спикер" class="speaker__img rounded-circle img-fluid mb-2">
+        <h6 class="speaker__name">Детектив пикачу</h6>
+        <p class="speaker__desc text-center">умудрённый, остроумный и обаятельный сыщик</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 speaker">
+        <img src="/Design.Layout/Assets/pika2.png" alt="Спикер" class="speaker__img rounded-circle img-fluid mb-2">
+        <h6 class="speaker__name">Детектив пикачу</h6>
+        <p class="speaker__desc text-center">умудрённый, остроумный и обаятельный сыщик</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 speaker">
+        <img src="/Design.Layout/Assets/pika2.png" alt="Спикер" class="speaker__img rounded-circle img-fluid mb-2">
+        <h6 class="speaker__name">Детектив пикачу</h6>
+        <p class="speaker__desc text-center">умудрённый, остроумный и обаятельный сыщик</p>
+      </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer text-center py-4">
+    <div class="footer__logo">
+      <img src="/Design.Layout/Assets/directum-footer-logo.png" alt="Footer Logo" class="footer__logo_img">
+    </div>
+    <span>© 2023 Directum. Все права защищены.</span>
+  </footer>
+
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registrationModalLabel">Регистрация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">ФИО</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Регистрация</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

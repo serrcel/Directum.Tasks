@@ -5,6 +5,11 @@ html {
   padding: 0;
 }
 
+p {
+  line-height: 1.625;
+  font-weight: normal !important;
+}
+
 body {
   font-family: "Roboto";
   font-weight: 400;
@@ -40,12 +45,12 @@ a, a:hover {
 /* Header */
 
 .header {
-  position: fixed;
   z-index: 100;
   width: 100%;
   height: 58px;
   background: #17A2B8;
   padding: 0 16px;
+  position: fixed;
 }
 
 .header__inner, .header__menu {
@@ -123,6 +128,30 @@ a, a:hover {
 
 
 
+
+/* Main section styles */
+
+.page__content {
+  flex: 1 0 auto;
+}
+
+
+/* Banner */
+.banner {
+  display: flex;
+  background-color: #17A2B8;
+  padding: 60px 20px;
+  color: white;
+}
+
+
+/* Registration */
+.registration{
+  background: #F8F9FA;
+  display: flex;
+}
+
+
 /* Media */
 @media (min-width: 768px) {
   .humburger {
@@ -137,6 +166,44 @@ a, a:hover {
     padding: 0;
   }
 }
+
+/* Gallery */
+.gallery {
+  background: #F8F9FA;
+}
+
+/* Speakers */
+.speakers .speaker__img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.speaker__name {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.speaker__desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+
+.footer {
+  background: #F8F9FA;
+  color: #BABABA !important;
+}
+
+.table-bordered th,
+  .table-bordered td {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 2px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+  }
 
 @media (max-width: 767px) {
   .header__menu_list {
