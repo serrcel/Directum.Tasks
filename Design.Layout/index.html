@@ -7,21 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="page">
+
   <header id="header" class="header">
     <div class="header__inner">
         <div id="headerMenu" class="header__menu">
             <ul class="header__menu_list mx-2 my-2 py-1 mx-md-0 my-md-0 py-md-0">
                 <li class="header__menu_item text-white">
-                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0">О мероприятии</a>
+                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0" href="#banner">О мероприятии</a>
                 </li>
                 <li class="header__menu_item text-white">
-                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0">Регистрация</a>
+                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0" href="#registration">Регистрация</a>
                 </li>
                 <li class="header__menu_item text-white">
-                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0">Стоимость участия</a>
+                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0" href="#pricing">Стоимость участия</a>
                 </li>
                 <li class="header__menu_item text-white">
-                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0">Спикеры</a>
+                    <a class="header__menu_item_link px-md-4 py-2 py-md-0 my-1 my-md-0" href="#speakes">Спикеры</a>
                 </li>
             </ul>
         </div>
@@ -30,7 +31,8 @@
 
 
   <section class="page__content">
-    <div class="banner container-fluid d-flex justify-content-center align-items-center flex-column">
+
+    <div id='banner' class="banner container-fluid d-flex justify-content-center align-items-center flex-column">
       <div class="banner__logo">
         <img src="/Design.Layout/Assets/directum-logo-banner.png" alt="Logo" class="footer__logo_img">
       </div>
@@ -38,11 +40,12 @@
       <div class="container-fluid banner__date text-center text-white">
         <p class="banner__date-text">4 МАЯ 2049</p>
         <p class="banner__location-text">в самом сердце страны</p>
-        <button class="btn btn-primary banner__register-btn">Регистрация</button>
+        <button class="btn btn-primary banner__register-btn" data-bs-toggle="modal" data-bs-target="#registrationModal">Регистрация</button>
       </div>
     </div>
-    <div class="container-fluid registration py-5 px-0">
-      <div class="row justify-content-center gx-4 gy-4">
+
+    <div id="registration" class="container-fluid registration py-5 px-0">
+      <div class="row justify-content-center gx-4 gy-4 flex-column flex-lg-row align-items-center">
         <div class="col-auto text-center" style="max-width: 500px;">
           <p><strong>Дорогие друзья!</strong></p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -51,14 +54,15 @@
           <h4><strong>Регистрация</strong></h4>
           <p>Пожалуйста, проверьте правильность введенных данных:</p>
           <ul class="list-unstyled">
-            <li><strong>ФИО:</strong> Соловьев Роман Александрович</li>
-            <li><strong>Место работы:</strong> DIRECTUM</li>
-            <li><strong>E-mail:</strong> serrcel@gmail.com</li>
+            <li><strong id="user-name">ФИО:</strong></li>
+            <li><strong>Место работы:</strong>DIRECTUM</li>
+            <li><strong id="user-email">E-mail:</strong></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="container pricing py-5 text-center">
+
+    <div id="pricing" class="container pricing py-5 text-center">
       <h4><strong>Стоимость участия</strong></h4>
       <p>(на 1 человека)</p>
       <table class="table table-bordered mt-4">
@@ -84,18 +88,14 @@
       </table>
     </div>
     
-    <div class="container-fluid gallery pt-5 px-0 text-center">
-      <h4><strong>Галерея</strong></h4>
+    <div id="gallery" class="container-fluid gallery px-0 text-center">
+      <h4 class="pt-4"><strong>Галерея</strong></h4>
       <div id="photoCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-    
-        <!-- Индикаторы -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
           <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
           <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
         </div>
-    
-        <!-- Слайды -->
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="./Assets/pika1.png" class="d-block w-100" alt="Фото 1">
@@ -107,8 +107,6 @@
             <img src="./Assets/pika3.png" class="d-block w-100" alt="Фото 3">
           </div>
         </div>
-    
-        <!-- Кнопки навигации -->
         <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Назад</span>
@@ -120,7 +118,7 @@
       </div>
     </div>
     
-    <div class="container speakers py-5 text-center">
+    <div id="speakes" class="speakers container py-5 text-center">
       <h4><strong>Наши спикеры</strong></h4>
       <div class="row justify-content-center mt-4 gx-4 gy-4">
         <div class="col-6 col-sm-4 col-md-3 col-sm-4 col-6 speaker">
@@ -163,11 +161,39 @@
         <img src="/Design.Layout/Assets/directum-footer-logo.png" alt="Logo" class="footer__logo_img">
       </div>
       <div class="footer__text">
-        <span style="color: #BABABA">© 2023 Directum. Все права защищены.</span>
+        <span>© 2023 Directum. Все права защищены.</span>
       </div>
     </div>
   </footer>
 
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registrationModalLabel">Регистрация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">ФИО</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <hr>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Регистрация</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
