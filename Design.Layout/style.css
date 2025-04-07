@@ -1,0 +1,177 @@
+/* 
+ * This is a global CSS rule or style definition. 
+ */
+a {
+    text-decoration: none;
+}
+
+.page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
+
+/* 
+ * Header styles
+ */
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 58px;
+    background: #17A2B8;
+    padding: 0 16px;
+}
+
+.header__inner, .header__menu {
+    display: flex;
+}
+
+
+.header__inner {
+    justify-content: center;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header__menu_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__menu_item {
+    position: relative;
+}
+
+.header__menu_item_link {
+    cursor: pointer;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    color: var(--body-color);
+    transition: color var(--trs);
+}
+
+@media (max-width: 991.9px) {
+    .header__menu_list {
+        display: none;
+    }
+}
+
+@media (max-width: 991.9px) {
+    .header__menu_item_link {
+        padding: 12px 8px !important;
+    }
+}
+
+/* 
+ * Main content styles
+ */
+
+ .page__content {
+    margin-top: 57px;
+    margin-bottom: 8px;
+    flex: 1 0 auto;
+}
+
+.banner {
+    background-color: #17A2B8;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.banner__logo img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.banner__title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .banner__date-text {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .banner__location-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .banner__register-btn {
+    padding: 10px 30px;
+    font-weight: bold;
+  }
+  
+.registration{
+    background: #F8F9FA;
+}
+
+  .registration p {
+    font-size: 0.95rem;
+  }
+
+
+
+  .pricing table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .pricing th,
+  .pricing td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.gallery {
+    background: #F8F9FA;
+}
+
+.gallery__image {
+    background: url("/Design.Layout/Assets/pika1.png") no-repeat center center;
+}
+  
+  .speakers .speaker__img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .speaker__name {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .speaker__desc {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+/* 
+ * Footer styles
+ */
+
+ .footer {
+    margin-top: auto;
+    color: #e7e7e7;
+    background: #F8F9FA;
+    padding: 48px 0 56px;
+    flex: 0 0 auto;
+    display: flex;
+}
