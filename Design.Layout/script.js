@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('registrationModal');
-    const outputDiv = document.getElementById('userData');
     const modalElement = document.getElementById('registrationModal');
     const modal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
     
